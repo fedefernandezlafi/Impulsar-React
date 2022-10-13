@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import "./Navbar.css";
+import "./Navbar.sass";
 
 const Navbar = () => {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
       <nav className="navbar" id="navbar">
         <LinkScroll className="navbar__logo">
           <img
-            className="logo__header"
+            className="navbar__logo__header"
             src="./assets/composiciones del logo/COMPOSICION1_LOGO/PNG/LOGO_EN GRIS CLARO-01-recortado.png"
             alt="Impulsar Dev Solutions"
           />
