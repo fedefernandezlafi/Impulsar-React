@@ -8,8 +8,10 @@ $color__grey: #E0E0E0;
 $color__grey-2: #535558;
 $color__grey-3: #202124;
 $color__orange: #f49c13;
-$color__lightblue: #57A9DA;
+$color__lightblue: #7EC2EC;
+$color__lightblue-2: #57A9DA;
 $color__yellow: #FCE062;
+$color__yellow-2: #EEE52C;
 $color__pink: #FF41AA;
 $color__lime: #B8E701;
 $color__blue: #131e2c;
@@ -34,7 +36,7 @@ $logo-width:calc(5em + 5vw);
     margin-top: $ma-t;
     margin-bottom: $ma-b;
 };
-@mixin AltoAncho($w, $h){
+@mixin altoAncho($w, $h){
     width: $w;
     height: $h;    
 };
@@ -72,7 +74,7 @@ $logo-width:calc(5em + 5vw);
     -moz-animation-delay: 1.4s;
 }
 @mixin hr{
-    color: $color_gris_claro;
+    color: $color__grey;
     width: 60%;
     transition: all .35 ease-in-out;
     @include margin__Espaciado(3em,3em);
@@ -81,21 +83,21 @@ $logo-width:calc(5em + 5vw);
     @include margin__Espaciado(2em,1em);
     width: 100%;
     text-align: center;
-    color: $color_celeste_oscuro;
-    font-family: $letra__principal;
+    color: $color__lightblue-2;
+    font-family: $fontStyle__principal;
 }
 @mixin title{
     @include margin__Espaciado(2em,1em);
     width: 100%;
     text-align: center;
-    color: $color_celeste_oscuro;
-    font-family: $letra__principal;
+    color: $color__lightblue-2;
+    font-family: $fontStyle__principal;
 }
 @mixin p{
     width: 100%;
     text-align: left;
-    color: $color_gris_claro;
-    font-family: $letra__secundaria; 
+    color: $color__grey;
+    font-family: $fontStyle__secondary; 
     @include margin__Espaciado(1em,1em);
 }
 @mixin compatibilidad_transition($config){
@@ -112,47 +114,47 @@ $logo-width:calc(5em + 5vw);
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color_general2;
+        color: $color__pink;
     }
 }
 @mixin camuflaje-amarillo{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color_amarillo2;
+        color: $color__yellow-2;
     }
 }
 @mixin camuflaje-verde{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color_verdelima;
+        color: $color__lime;
     }
 }
 @mixin camuflaje-naranja{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color_naranjaApagado;
+        color: $color__orange;
     }
 }
 @mixin camuflaje_background{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        background-color: $color_general2;
+        background-color: $color__pink;
     }
 }
 @mixin camuflaje_active{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:active{
-        color: $color_general2;
+        color: $color__pink;
     }
 }
 @mixin span{
-    color: $color_celeste_oscuro;
-    font-family: $letra__principal;
+    color: $color__lightblue-2;
+    font-family: $fontStyle__principal;
     @include camuflaje;
 }
 //animaciones
@@ -170,26 +172,26 @@ $logo-width:calc(5em + 5vw);
 }
 @keyframes pulsate{
     0%{
-        box-shadow: 0 0 25px $color_general2,
-        0 0 50px $color_general2;
+        box-shadow: 0 0 25px $color__pink,
+        0 0 50px $color__pink;
     }
 }
 @keyframes pulsate-amarillo{
     0%{
-        box-shadow: 0 0 25px $color_amarillo2,
-        0 0 50px $color_amarillo2;
+        box-shadow: 0 0 25px $color__yellow-2,
+        0 0 50px $color__yellow-2;
     }
 }
 @keyframes pulsate-verdelima{
     0%{
-        box-shadow: 0 0 25px $color_verdelima,
-        0 0 50px $color_verdelima;
+        box-shadow: 0 0 25px $color__lime,
+        0 0 50px $color__lime;
     }
 }
 @keyframes pulsate-naranja{
     0%{
-        box-shadow: 0 0 25px $color_naranjaApagado,
-        0 0 50px $color_naranjaApagado;
+        box-shadow: 0 0 25px $color__orange,
+        0 0 50px $color__orange;
     }
 }
 $base: 0.6rem;
@@ -212,6 +214,6 @@ $base: 0.6rem;
 }
 @keyframes camuflaje{
     0%{
-        color: $color_general2;
+        color: $color__pink;
     }
 }
