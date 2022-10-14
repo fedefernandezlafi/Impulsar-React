@@ -1,5 +1,5 @@
-import React from "react";
-import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
 import { AppRoutes } from "./components/AppRoutes/AppRoutes";
 
 function App() {

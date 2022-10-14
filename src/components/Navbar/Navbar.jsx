@@ -1,8 +1,8 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import "./Navbar.sass";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const [menuClicked, setMenuClicked] = useState(false);
