@@ -8,11 +8,10 @@ $color__grey: #E0E0E0;
 $color__grey-2: #535558;
 $color__grey-3: #202124;
 $color__orange: #f49c13;
-$color__orangeRocket: #F76304;
 $color__lightblue: #7EC2EC;
 $color__lightblue-2: #57A9DA;
 $color__yellow: #FCE062;
-$color__yellowRocket: #FFC93A;
+$color__yellow-2: #EEE52C;
 $color__pink: #FF41AA;
 $color__lime: #B8E701;
 $color__blue: #131e2c;
@@ -37,7 +36,7 @@ $logo-width:calc(5em + 5vw);
     margin-top: $ma-t;
     margin-bottom: $ma-b;
 };
-@mixin AltoAncho($w, $h){
+@mixin altoAncho($w, $h){
     width: $w;
     height: $h;    
 };
@@ -115,14 +114,14 @@ $logo-width:calc(5em + 5vw);
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color__orangeRocket;
+        color: $color__pink;
     }
 }
 @mixin camuflaje-amarillo{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color__yellow;
+        color: $color__yellow-2;
     }
 }
 @mixin camuflaje-verde{
@@ -136,21 +135,21 @@ $logo-width:calc(5em + 5vw);
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        color: $color_naranjaApagado;
+        color: $color__orange;
     }
 }
 @mixin camuflaje_background{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:hover{
-        background-color: $color__orangeRocket;
+        background-color: $color__pink;
     }
 }
 @mixin camuflaje_active{
     transition: all 1s ease-in-out;
     @include compatibilidad_transition(all 1s ease-in-out);
     &:active{
-        color: $color__orangeRocket;
+        color: $color__pink;
     }
 }
 @mixin span{
@@ -173,14 +172,14 @@ $logo-width:calc(5em + 5vw);
 }
 @keyframes pulsate{
     0%{
-        box-shadow: 0 0 25px $color__orangeRocket,
-        0 0 50px $color__orangeRocket;
+        box-shadow: 0 0 25px $color__pink,
+        0 0 50px $color__pink;
     }
 }
 @keyframes pulsate-amarillo{
     0%{
-        box-shadow: 0 0 25px $color__yellow,
-        0 0 50px $color__yellow;
+        box-shadow: 0 0 25px $color__yellow-2,
+        0 0 50px $color__yellow-2;
     }
 }
 @keyframes pulsate-verdelima{
@@ -191,7 +190,7 @@ $logo-width:calc(5em + 5vw);
 }
 @keyframes pulsate-naranja{
     0%{
-        box-shadow: 0 0 25px $color__orangeRocket,
+        box-shadow: 0 0 25px $color__orange,
         0 0 50px $color__orange;
     }
 }
@@ -215,6 +214,6 @@ $base: 0.6rem;
 }
 @keyframes camuflaje{
     0%{
-        color: $color__orangeRocket;
+        color: $color__pink;
     }
 }
