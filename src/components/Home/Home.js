@@ -1,12 +1,11 @@
-import { Header } from "./Header/Header"
-
+import Servicios from "../Servicios/Servicios";
+import { Header } from "./Header/Header";
 
 export const Home = () => {
-    return (
-            <>
-                <Header/>
-            </>
-
-
-    )
-}
+  return (
+    <>
+      <Header />
+      <Servicios />
+    </>
+  );
+};

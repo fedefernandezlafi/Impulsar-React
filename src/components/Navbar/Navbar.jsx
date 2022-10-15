@@ -14,6 +14,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar" id="navbar">
+        <div className="particles-js-canvas-el" id="particles">
+          {" "}
+        </div>
         <LinkScroll className="navbar__logo">
           <img
             className="navbar__logo__header"
@@ -40,7 +43,7 @@ const Navbar = () => {
             <LinkScroll
               activeClass="active"
               className="navbar__links"
-              to="hero"
+              to="navbar"
               offset={20}
               spy={true}
               smooth={true}
@@ -53,20 +56,33 @@ const Navbar = () => {
           <li className="navbar__item">
             <LinkScroll
               className="navbar__links"
-              to="slider"
+              to="services"
               offset={30}
               spy={true}
               smooth={true}
               duration={1300}
             >
               {" "}
-              Viajes{" "}
+              Servicios{" "}
             </LinkScroll>
           </li>
           <li className="navbar__item">
             <LinkScroll
               className="navbar__links"
-              to="footer"
+              to="us"
+              offset={20}
+              spy={true}
+              smooth={true}
+              duration={1300}
+            >
+              {" "}
+              Nosotros{" "}
+            </LinkScroll>
+          </li>
+          <li className="navbar__item">
+            <LinkScroll
+              className="navbar__links"
+              to="form"
               offset={20}
               spy={true}
               smooth={true}
