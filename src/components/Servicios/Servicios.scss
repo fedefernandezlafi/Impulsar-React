@@ -1,8 +1,44 @@
-@import "/src/components/styles/variables";
+@import "../styles/variables";
 
-.containerService{
-    width: 100%;
-    height: 100vh;  
-    background-color: $color__blue;   
-    
+.section_servicios{
+    @include secciones;
+    @include margin__Espaciado(0em,2em);
+    hr{
+        @include hr;
+    }
+    h2{
+        @include h2;
+        @include camuflaje;
+    }
+    .section_servicios_paragraph{
+        @include p;
+        width: 60%;
+        text-align: justify;
+        span{
+            @include span;
+        }
+    }
+    .particles-js-canvas-el{
+        position: absolute
+    }
+    .servicio_principal_container{
+        @include flex__ColumnCenterAll;
+        width: 100%;
+        @include margin__Espaciado(2em,2em);
+        position: relative;
+        background-color: #000000;
+        .containerStar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            .servicioPrincipal_title{
+                font-family: $fontStyle__principal;
+                color: $color__grey;
+                text-align: center;
+                margin: 1em;
+            }           
+        }      
+    }
 }

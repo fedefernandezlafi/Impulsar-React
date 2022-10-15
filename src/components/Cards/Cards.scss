@@ -1,0 +1,87 @@
+@import "../styles/variables";
+
+.cardsImpulsos_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    @include margin__Espaciado(2em,3em);
+}
+.container_content_impulso{
+    @include flex__ColumnCenterAll;
+    width: 25%;
+    max-width: 22rem;
+    height: 100%;
+    min-height: 34rem;
+    @include margin__Espaciado(1em,1em);
+    box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
+    border-radius: 15pt;
+    transition: all 1s ease-in-out;
+    &:hover{
+        box-shadow: $color__pink 3px 4px 17px;
+        .container_impulso_speach{
+            .impulso_title{
+                color: $color__pink;
+            }
+        };  
+    }
+    .contenedor_impulso_img{
+        width: 8.5em;
+        height: 7em;
+        @include flex__Center;
+        max-width: 8.5em;
+        max-height: 7em;
+        overflow: hidden;
+        margin-top: .5em;
+        margin-bottom: 1em;
+        .img_impulso{
+            width: 100%;
+            height: 100%;
+            transition: all 500ms ease;
+            @include compatibilidad_transition(all 500ms ease);
+            &:hover{
+                transform: scale(1.2);
+                @include compatibilidad_transform(scale(1.2));
+            }
+        } 
+    }
+    .contenedor_btns{
+        width: 100%;
+        @include flex__ColumnCenterAll;
+        @include margin__Espaciado(0em,1em);
+    }   
+    .container_impulso_speach{
+        width: 95%;
+        height: 100%;
+        min-height: 12rem;
+        @include flex__ColumnCenterAll;
+        .impulso_title{
+            text-align: center;
+            font-family: $fontStyle__principal;
+            color: $color__lightblue-2;
+            width: 100%;
+            transition: all 1s ease-in-out;
+        }
+        .impulso_paragraph{
+            @include p;
+            //font-weight: bold;
+            text-align: justify;
+            width: 90%;
+        }
+    }
+    .btn_impulsos{
+        @include margin__Espaciado(1em,1em);
+        @include flex__Center;
+        a{
+            min-width: 200px;
+            min-height: 50px;
+            text-align: center;
+            padding: 10px 15px;
+            @include flex__Center;
+        }
+    }
+}
+
