@@ -25,6 +25,7 @@
             flex-direction: column;
             width: 100%;
             height: 100%;
+            margin-top: 5em;
         }   
         .contenedor_presentacion_h1{
             display: flex;
@@ -63,6 +64,9 @@
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
+            &:hover{
+                cursor: grab;
+            }
         }
         .swiper-slide-active{
             transition: all 1.5s ease-in-out;
