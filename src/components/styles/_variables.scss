@@ -80,7 +80,7 @@ $logo-width:calc(5em + 5vw);
     @include margin__Espaciado(3em,3em);
 }
 @mixin h2{
-    @include margin__Espaciado(2em,1em);
+    @include margin__Espaciado(1.5em,1em);
     width: 100%;
     text-align: center;
     color: $color__lightblue-2;

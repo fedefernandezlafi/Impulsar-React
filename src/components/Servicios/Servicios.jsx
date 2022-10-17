@@ -4,26 +4,24 @@ import "./Servicios.scss";
 
 const Servicios = () => {
   return (
-    <div>
-      <section
-        id="sectionServicios"
-        class="section_servicios wow animate__animated animate__fadeInLeft"
-      />
-      <hr id="serviciosHr" />
+    <section
+      id="sectionServicios"
+      className="section__services wow animate__animated animate__fadeInLeft"
+    >
       <h2
         id="sectionServiciosTitle"
-        class="h2 section_servicios_title wow animate__animated animate__fadeInLeft"
+        className="h2 section_servicios_title wow animate__animated animate__fadeInLeft"
       >
-        ¿CÓMO LO HACEMOS?
+        NUESTROS SERVICIOS
       </h2>
-      <p class="section_servicios_paragraph">
+      <p className="section_servicios_paragraph">
         Contamos con tres servicios que se conectan y juntos, garantizan el
         proceso necesario para construir una marca sólida que destaque en el
         mercado y que te impulse para <span>ATRAER</span>, <span>CONECTAR</span>{" "}
         y <span>VENDER</span>.
-      </p>{" "}
+      </p>
       <Cards />
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,6 @@
 @import "../styles/variables";
 
-.section_servicios{
+.section__services{
     @include secciones;
     @include margin__Espaciado(0em,2em);
     hr{
@@ -26,13 +26,7 @@
         width: 100%;
         @include margin__Espaciado(2em,2em);
         position: relative;
-        background-color: #000000;
-        .containerStar{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 60%;
+        background-color: #000000;      
             .servicioPrincipal_title{
                 font-family: $fontStyle__principal;
                 color: $color__grey;
@@ -41,4 +35,3 @@
             }           
         }      
     }
-}

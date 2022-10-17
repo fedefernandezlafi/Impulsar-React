@@ -7,11 +7,33 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     @include margin__Espaciado(2em,3em);
 }
-.container_content_impulso{
+.contenedor_btn_pulse{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn_pulse{
+        color: $color__grey;
+        font-family: $fontStyle__secondary;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 15px 20px;
+        border: 3px solid $color__grey;
+        border-radius: 10px;
+        &:hover{
+            color: $color__pink;
+            animation: pulsate 1s ease-in-out;
+            border: 3px solid $color__pink
+        };
+    }    
+}
+.container_content_impulso {
     @include flex__ColumnCenterAll;
+    background-color: $color__blue;   
     width: 25%;
     max-width: 22rem;
     height: 100%;
@@ -19,7 +41,7 @@
     @include margin__Espaciado(1em,1em);
     box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
     border-radius: 15pt;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;  
     &:hover{
         box-shadow: $color__pink 3px 4px 17px;
         .container_impulso_speach{
@@ -48,6 +70,7 @@
             }
         } 
     }
+    
     .contenedor_btns{
         width: 100%;
         @include flex__ColumnCenterAll;
@@ -57,6 +80,7 @@
         width: 95%;
         height: 100%;
         min-height: 12rem;
+        z-index: 19000;
         @include flex__ColumnCenterAll;
         .impulso_title{
             text-align: center;
@@ -83,5 +107,12 @@
             @include flex__Center;
         }
     }
+    .btn_pulse{
+        &:hover{
+            color: $color__yellow;
+            animation: pulsate-amarillo 1s ease-in-out;
+            border: 3px solid $color__yellow;
+        };
+    }   
+       
 }
-
