@@ -4,14 +4,13 @@ import "./ServicioDestacado.scss";
 
 const ServicioDestacado = () => {
   return (
-    <article class="caminoDigital_container" id="caminoDigitalContainer">
+    <article className="caminoDigital_container" id="caminoDigitalContainer">
       <h2
         id="sectionServiciosTitle"
-        class="h2 section_servicios_title wow animate__animated animate__fadeInLeft"
+        className="h2 section_servicios_title wow animate__animated animate__fadeInLeft"
       >
         ¡CONECTÁ LOS TRES IMPULSOS EN UN ÚNICO CAMINO DIGITAL!
       </h2>
-      <Card />
     </article>
   );
 };

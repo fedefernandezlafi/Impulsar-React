@@ -23,12 +23,7 @@
         text-decoration: none;
         padding: 15px 20px;
         border: 3px solid $color__grey;
-        border-radius: 10px;
-        &:hover{
-            color: $color__pink;
-            animation: pulsate 1s ease-in-out;
-            border: 3px solid $color__pink
-        };
+        border-radius: 10px;       
     }    
 }
 .container_content_impulso {
@@ -41,15 +36,9 @@
     @include margin__Espaciado(1em,1em);
     box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
     border-radius: 15pt;
-    transition: all 1s ease-in-out;  
-    &:hover{
-        box-shadow: $color__pink 3px 4px 17px;
-        .container_impulso_speach{
-            .impulso_title{
-                color: $color__pink;
-            }
-        };  
-    }
+    transition: all 1s ease-in-out; 
+ 
+    
     .contenedor_impulso_img{
         width: 8.5em;
         height: 7em;
@@ -107,12 +96,64 @@
             @include flex__Center;
         }
     }
-    .btn_pulse{
+
+    #impulsoMarca{
+        &:hover{  
+            .container_impulso_content_impulso{
+                box-shadow: $color__yellow-2 3px 4px 17px;
+                .container_impulso_speach {
+                    .impulso_title{
+                        color: $color__yellow-2;
+                    }
+                }               
+            };  
+        }
+        .contenedor_btn_pulse{            
+                &:hover{
+                    color: $color__yellow-2;
+                    animation: pulsate-amarillo 1s ease-in-out;
+                    border: 3px solid $color__yellow-2;
+                };
+            }    
+        
+    }
+    #impulsoVisual{
         &:hover{
-            color: $color__yellow;
-            animation: pulsate-amarillo 1s ease-in-out;
-            border: 3px solid $color__yellow;
-        };
-    }   
+            box-shadow: $color__lime 3px 4px 17px;
+            .container_impulso_speach{
+                .impulso_title{
+                    color: $color__lime;
+                }
+            };  
+        }
+        .contenedor_btn_pulse{
+            .btn_pulse{
+                &:hover{
+                    color: $color__lime;
+                    animation: pulsate-verde 1s ease-in-out;
+                    border: 3px solid $color__lime;
+                };
+            }    
+        }
+    }
+    #impulsoWeb{
+        &:hover{
+            box-shadow: $color__orange 3px 4px 17px;
+            .container_impulso_speach{
+                .impulso_title{
+                    color: $color__orange;
+                }
+            };  
+        }
+        .contenedor_btn_pulse{
+            .btn_pulse{
+                &:hover{
+                    color: $color__orange;
+                    animation: pulsate-naranja 1s ease-in-out;
+                    border: 3px solid $color__orange;
+                };
+            }    
+        }
+    } 
        
 }

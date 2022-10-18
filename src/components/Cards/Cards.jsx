@@ -1,12 +1,13 @@
 import "./Cards.scss";
 import { Card } from "./Card/Card";
 
-const Cards = () => {
+const Cards = ({ cards }) => {
+  console.log(cards);
   return (
     <article className="cardsImpulsos_container">
-      <Card />
-      <Card />
-      <Card />
+      {cards.map((card) => (
+        <Card key={card.id} card={card} />
+      ))}
     </article>
   );
 };

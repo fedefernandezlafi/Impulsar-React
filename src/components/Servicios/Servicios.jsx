@@ -1,8 +1,11 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 import "./Servicios.scss";
+import { useCards } from "./useCards";
 
 const Servicios = () => {
+  const { cards } = useCards();
+
   return (
     <section
       id="sectionServicios"
@@ -20,7 +23,7 @@ const Servicios = () => {
         mercado y que te impulse para <span>ATRAER</span>, <span>CONECTAR</span>{" "}
         y <span>VENDER</span>.
       </p>
-      <Cards />
+      <Cards cards={cards} />
     </section>
   );
 };

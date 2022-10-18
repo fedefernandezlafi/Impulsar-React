@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Card = () => {
+export const Card = ({ card }) => {
   return (
     <div className="container_content_impulso">
       <div id="contenedorImagenImpulsoMarca" className="contenedor_impulso_img">
@@ -11,15 +11,18 @@ export const Card = () => {
           className="img_impulso"
         />
       </div>
-      <div
-        id="containerSpeachImpulsoMarca"
-        className="container_impulso_speach"
-      >
-        <h3 className="h3 impulso_title">IMPULSO DE IDENTIDAD DE MARCA</h3>
-        <p className="impulso_paragraph">
-          Desarrollá la base sólida de tu marca y dale ese impulso para destacar
-          en el mercado.
-        </p>
+      <div id={card.id} className="container_impulso_speach">
+        <h3 className="h3 impulso_title"> {card.title} </h3>
+        <p className="impulso_paragraph">{card.description}</p>
+        {
+          <p
+            className="impulso_paragraph"
+            style={{ display: !card.description2 ? "none" : "flex" }}
+          >
+            {" "}
+            {card.description2}{" "}
+          </p>
+        }
       </div>
       <div className="contenedor_btns">
         <div className="contenedor_btn_pulse btn_impulsos">

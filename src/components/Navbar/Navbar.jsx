@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "./Navbar.scss";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="particles-js-canvas-el" id="particles">
         {" "}
       </div>
-      <LinkScroll className="navbar__logo">
+      <LinkScroll className="navbar__logo" to="/">
         <img
           className="navbar__logo__header"
           src="./assets/composiciones del logo/COMPOSICION1_LOGO/PNG/LOGO_EN GRIS CLARO-01-recortado.png"
