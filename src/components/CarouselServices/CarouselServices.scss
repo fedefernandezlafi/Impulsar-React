@@ -1,0 +1,292 @@
+@import '../styles/variables';
+.article__carousel__Services{
+    @include flex__ColumnCenterAll;
+}
+.carousel__Services{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+    @include margin__Espaciado(1em,2em);
+    padding: 1em;
+}
+.carousel_title{
+    color: $color__lightblue-2;
+    font-family: $fontStyle__principal;
+    width: 90%;
+    text-align: center;
+    @include margin__Espaciado(1em,1em);
+    @include camuflaje;
+}
+.card{
+    width: 15rem;
+    height: 18rem;
+    display: flex;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    outline: 1px solid $color__grey;
+    outline-offset: -8px;
+    box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
+/*     -moz-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1); */
+    transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    @include compatibilidad_transition(2.5s cubic-bezier(0.4, 0.2, 0.2, 1));
+    &:hover .card_content{
+        opacity: 1;
+        transform: translateY(0rem);
+        @include compatibilidad_transform(translateY(0rem));
+    };
+    &:hover .dp{
+        transform: translateY(15rem);
+        @include compatibilidad_transform(translateY(15rem));
+        i{
+            color: $color__pink;
+        }
+    };
+    &:hover{
+        box-shadow: $color__pink 3px 4px 17px;
+        .card_title{
+            color: $color__pink;
+        }
+    };
+}
+.dp{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    @include compatibilidad_transition(all 1s ease-in-out);
+    .card_title{
+        font-family: $fontStyle__principal;
+        color: $color__grey;
+        width: 100%;
+        text-align: center;
+        transition: all .5s ease-in-out;
+    }
+    .touch{
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        bottom: 10%;
+    }
+}
+.card_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 1em;
+    transform: translateY(-15rem);
+    transition: all 1s ease-in-out;
+    @include compatibilidad_transition(all 1s ease-in-out);
+    @include compatibilidad_transform(translateY(-15rem));
+    .card_paragraph{
+        font-family: $fontStyle__secondary;
+        color: $color__grey;
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+    }
+    .contenedor_btn_card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include margin__Espaciado(1em,1em);
+        .btn_card{
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 3px solid $color__grey;
+            border-radius: 10px;
+            &:hover{
+                color: $color__pink;
+                animation: pulsate 1s ease-in-out;
+                border: 3px solid $color__pink;
+            };
+        }
+    }
+}
+/* @media screen and (min-width: 320px) {
+    .card{
+        width: 14rem;
+        height: 20rem;
+    }    
+}
+@media screen and (min-width: 480px) {
+    .card{
+        width: 22rem;
+        height: 17rem;
+    }    
+}
+@media screen and (min-width: 768px) {
+    .card{
+        width: 28rem;
+        height: 18rem;
+    }    
+}
+@media screen and (min-width: 900px) {
+    .card{
+        width: 30rem;
+        height: 20rem;
+    }    
+}
+@media screen and (min-width: 1024px) {
+    .card{
+        width: 35rem;
+        height: 20rem;
+    }    
+} */
+
+.card_masServicios{
+    width: 15rem;
+    height: 18rem;
+    display: flex;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    outline: 1px solid $color__grey;
+    outline-offset: -8px;
+    box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
+    transition: all 1s ease-in-out;
+    &:hover{
+        transition: all 1s ease-in-out;
+        box-shadow: $color__pink 3px 4px 17px;
+        outline: 1px solid $color__pink;
+        outline-offset: -8px;
+        .card_title{
+            color: $color__pink;
+        }
+    };
+    .contenedor_btn_card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include margin__Espaciado(1em,1em);
+        .btn_card{
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 3px solid $color__grey;
+            border-radius: 10px;
+            &:hover{
+                color: $color__pink;
+                animation: pulsate 1s ease-in-out;
+                border: 3px solid $color__pink;
+            };
+        }
+    }
+}
+.dp_masServicios{
+    @include flex__ColumnCenterAll;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    @include compatibilidad_transition(all 1s ease-in-out);
+    padding: 1em;
+    .card_title{
+        font-family: $fontStyle__principal;
+        color: $color__grey;
+        width: 100%;
+        text-align: center;
+        transition: all .1s ease-in-out;
+    }
+}
+//caracteristicas especificas segun cada pages
+#masServiciosCarouselMarca{
+    .card_masServicios{
+        &:hover{
+            box-shadow: $color__yellow-2 3px 4px 17px;
+            outline: 1px solid $color__yellow-2;
+            .card_title{
+                color: $color__yellow-2;
+            }
+        };
+        .contenedor_btn_card{
+            .btn_card{
+                &:hover{
+                    color: $color__yellow-2;
+                    animation: pulsate-amarillo 1s ease-in-out;
+                    border: 3px solid $color__yellow-2;
+                };
+            }
+        }
+    }
+    .dp_masServicios{
+        .card_title{
+            @include camuflaje-amarillo
+        }
+    }
+}
+#masServiciosCarouselVisual{
+    .card_masServicios{
+        &:hover{
+            box-shadow: $color__lime 3px 4px 17px;
+            outline: 1px solid $color__lime;
+            .card_title{
+                color: $color__lime;
+            }
+        };
+        .contenedor_btn_card{
+            .btn_card{
+                &:hover{
+                    color: $color__lime;
+                    animation: pulsate-verde 1s ease-in-out;
+                    border: 3px solid $color__lime;
+                };
+            }
+        }
+    }
+    .dp_masServicios{
+        .card_title{
+            @include camuflaje-verde;
+        }
+    }
+}
+#masServiciosCarouselWeb{
+    .card_masServicios{
+        &:hover{
+            box-shadow: $color__orange 3px 4px 17px;
+            outline: 1px solid $color__orange;
+            .card_title{
+                color: $color__orange;
+            }
+        };
+        .contenedor_btn_card{
+            .btn_card{
+                &:hover{
+                    color: $color__orange;
+                    animation: pulsate-naranja 1s ease-in-out;
+                    border: 3px solid $color__orange;
+                };
+            }
+        }
+    }
+    .dp_masServicios{
+        .card_title{
+            @include camuflaje-naranja;
+        }
+    }
+}

@@ -13,10 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" id="navbar">
-      <div className="particles-js-canvas-el" id="particles">
-        {" "}
-      </div>
-      <LinkScroll className="navbar__logo" to="/">
+      <LinkScroll className="navbar__logo">
         <img
           className="navbar__logo__header"
           src="./assets/composiciones del logo/COMPOSICION1_LOGO/PNG/LOGO_EN GRIS CLARO-01-recortado.png"
