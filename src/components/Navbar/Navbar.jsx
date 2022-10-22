@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" id="navbar">
-      <LinkScroll className="navbar__logo">
+      <LinkScroll to={"header"} className="navbar__logo">
         <img
           className="navbar__logo__header"
           src="./assets/composiciones del logo/COMPOSICION1_LOGO/PNG/LOGO_EN GRIS CLARO-01-recortado.png"
@@ -37,29 +37,24 @@ const Navbar = () => {
       >
         <li className="navbar__item">
           <LinkScroll
-            activeClass="active"
             className="navbar__links"
-            to="navbar"
+            to="header"
             offset={20}
-            spy={true}
             smooth={true}
-            duration={1300}
+            duration={1000}
           >
-            {" "}
-            Inicio{" "}
+            Inicio
           </LinkScroll>
         </li>
         <li className="navbar__item">
           <LinkScroll
             className="navbar__links"
-            to="services"
+            to="sectionServicios"
             offset={30}
-            spy={true}
             smooth={true}
-            duration={1300}
+            duration={1000}
           >
-            {" "}
-            Servicios{" "}
+            Servicios
           </LinkScroll>
         </li>
         <li className="navbar__item">
@@ -69,20 +64,19 @@ const Navbar = () => {
             offset={20}
             spy={true}
             smooth={true}
-            duration={1300}
+            duration={1000}
           >
-            {" "}
-            Nosotros{" "}
+            Nosotros
           </LinkScroll>
         </li>
         <li className="navbar__item">
           <LinkScroll
             className="navbar__links"
-            to="form"
-            offset={20}
+            to="sectionContacto"
+            offset={-50}
             spy={true}
             smooth={true}
-            duration={1300}
+            duration={1000}
           >
             {" "}
             Contacto{" "}
