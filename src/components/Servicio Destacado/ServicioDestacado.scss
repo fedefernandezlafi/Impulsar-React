@@ -1,0 +1,112 @@
+@import "../styles/variables";
+
+.caminoDigital_container{
+       @include flex__ColumnCenterAll;
+        h2{
+            @include camuflaje;
+            @include h2;           
+        }
+        .container_content_caminoDigital{
+            @include flex__ColumnCenterAll;
+            width: 35%;
+            min-width: 25rem;
+            max-width: 25rem;
+            height: 100%;
+            min-height: 36rem;
+            @include margin__Espaciado(1em,1em);
+            box-shadow: rgba(87, 169, 218, 0.884) 3px 4px 17px;
+            border-radius: 15pt;
+            transition: all 1s ease-in-out;     
+            text-align: center;
+            justify-items: center;
+            .caminoDigital_container_speach{
+            @include flex__ColumnCenterAll; 
+            justify-content: flex-start;         
+            }
+
+            .impulso_title{
+                text-align: center;
+                font-family: $fontStyle__principal;
+                color: $color__lightblue-2;
+                width: 100%;
+                transition: all 1s ease-in-out; 
+                padding-left: 1rem;               
+                padding-right: 1rem;               
+            }
+            .impulso_paragraph{
+                @include p;
+                text-align: justify;
+                width: 90%;
+                padding-left: 1rem;               
+                padding-right: 1rem;   
+            }           
+            &:hover{
+                box-shadow: $color__pink 3px 4px 17px;
+                .caminoDigital_container_speach{                   
+                    justify-content: flex-start;
+                    .impulso_title{
+                        color: $color__pink;
+                    }
+                };  
+            }
+        }
+        .contenedor_impulso_img{
+            width: 8.5em;            
+            height: 15%;
+            @include flex__Center;
+            max-width: 8.5em;
+            min-height: 5em;
+            overflow: hidden;
+            margin-top: .5em;
+            margin-bottom: 1em;
+            position: relative;
+            .img_impulso{
+                width: 100%;
+                height: 100%;
+                transition: all 500ms ease;
+                @include compatibilidad_transition(all 500ms ease);
+                &:hover{
+                    transform: scale(1.2);
+                    @include compatibilidad_transform(scale(1.2));
+            }
+        } 
+    }
+    .contenedor_btns{
+        width: 100%;
+        @include flex__ColumnCenterAll;
+        @include margin__Espaciado(0em,1em);
+        height: 15%;
+        max-height: 5rem;
+        .contenedor_btn_pulse{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;            
+        .btn_pulse{
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 20px;
+            border: 3px solid $color__grey;
+            border-radius: 10px;                  
+            &:hover{
+                color: $color__pink;
+                animation: pulsate 1s ease-in-out;
+                border: 3px solid $color__pink;
+            }        
+            } 
+        }
+        .btn_impulsos{        
+            @include margin__Espaciado(1em,1em);
+            @include flex__Center;
+            a{
+                min-width: 200px;
+                min-height: 50px;
+                text-align: center;
+                padding: 10px 15px;
+                @include flex__Center;
+            }                       
+        }
+    }
+    }
