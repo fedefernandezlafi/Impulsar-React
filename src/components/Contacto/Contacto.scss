@@ -1,0 +1,240 @@
+@import '../styles/variables';
+
+.section_contacto{
+    @include secciones;
+    @include margin__Espaciado(2em,2em);
+    hr{
+        @include hr;
+    }
+    h2{
+        @include h2;
+        @include camuflaje;
+        @include margin__Espaciado(1.5em,1em);
+    }
+    .contacto_redes_container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 500px;
+        justify-content: center;
+        align-items: flex-start;
+        .contacto_redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+            .contacto_redes_anchord{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                width: 40px;
+                height: 40px;
+                margin-bottom: 1em;
+                text-align: center;
+                text-decoration: none;
+                color: $color__lightblue-2;
+                box-shadow: $color__lightblue-2 2px 2px 5px;
+                border-radius: 50%;
+                &:hover{
+                    color: $color__pink;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px 5px $color__pink;
+                    transition: all .4s ease-in-out;
+                    transform: scale(1.2);
+                    @include compatibilidad_transform(scale(1.2));
+                };
+            }
+        }
+    }
+    form{
+        width: 80%;
+        max-width: 920px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+        border-radius: 20px;
+        box-shadow: rgba(87, 169, 218) 3px 4px 17px;
+        transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+        @include compatibilidad_transition(2.5s cubic-bezier(0.4, 0.2, 0.2, 1));
+        @include margin__Espaciado(1em,1em);
+        transition: all 1s ease-in-out;
+    }
+    .formulario_contenedor_datos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        h3{
+            color: $color__grey;
+            font-family: $fontStyle__principal;
+            transition: all 1s ease-in-out;
+        }
+        .contenedor_inputs{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px;
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            font-weight: bold;
+            transition: all 1s ease-in-out;
+        }
+        .section__formulario__contenedor__form-input{
+            padding: 5px;
+        }
+        .contenedor_checkbox{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 350px;
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            justify-content: space-around;
+            font-weight: bold;
+        }
+    }
+    .formulario_contenedor_textarea{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        h3{
+            color: $color__lightblue-2;
+            font-family: $fontStyle__principal;
+            width: 100%;
+            @include margin__Espaciado(1em,1em);
+            transition: all 1s ease-in-out;
+        }
+        .contenedor_inputs{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px;
+            color: $color__grey;
+            font-family: $fontStyle__secondary;
+            font-weight: bold;
+            transition: all 1s ease-in-out;
+        }
+        .contenedor_btn_formulario{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            @include margin__Espaciado(1em,1em);
+            .btn_formulario{
+                width: 40%;
+                min-width: 150px;
+                max-width: 200px;
+                color: $color__grey;
+                font-family: $fontStyle__secondary;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 10px 15px;
+                border: 3px solid $color__grey;
+                border-radius: 10px;
+                &:hover{
+                    color: $color__pink;
+                    animation: pulsate 1s ease-in-out;
+                    border: 3px solid $color__pink;
+                };
+            }
+        }
+    }
+    .contacto_formulario{
+        transition: all 1s ease-in-out;
+        &:hover{
+            box-shadow: 3px 4px 17px $color__pink;
+            .formulario_contenedor_datos{
+                h3{
+                    color: $color__pink;
+                }
+            };
+            .contenedor_inputs{
+                color: $color__pink;
+            }
+            .formulario_contenedor_textarea{
+                h3{
+                    color: $color__pink;
+                }
+            }
+        }
+    }
+    .contacto_redesUbicacion{
+        @include margin__Espaciado(1em,1em);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 1000px;
+        justify-content: center;
+        align-items: flex-start;
+        .containerRedes{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                @include margin__Espaciado(1em,1em);
+                color: $color__lightblue-2;
+                font-family: $fontStyle__principal;
+                @include camuflaje;
+            }
+            .contacto_redes{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                .contacto_redes_anchord{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 1em;
+                    text-align: center;
+                    text-decoration: none;
+                    color: $color__grey-2;
+                    &:hover{
+                        color: $color__pink;
+                        border-radius: 50%;
+                        box-shadow: 2px 2px 5px $color__pink;
+                        transition: all .4s ease-in-out;
+                        @include compatibilidad_transition(all .4s ease-in-out);
+                        transform: scale(1.2);
+                    };
+                }
+            }
+        }
+        .container_ubicacion{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                @include margin__Espaciado(1em,1em);
+                color: $color__lightblue-2;
+                font-family: $fontStyle__principal;
+            }
+            p{
+                @include margin__Espaciado(0,1em);
+                color: $color__grey-2;
+                font-family: $fontStyle__secondary;
+            }
+            iframe{
+                width: 80%;
+                @include margin__Espaciado(1em,1em);
+            }
+        }
+    }
+
+}

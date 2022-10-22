@@ -1,0 +1,23 @@
+@import '../styles/variables';
+
+.whatsapp{
+    position: fixed;
+    bottom: 1%;
+    font-size: 50px;
+    color: #00bb2d;
+    width:50px;
+    height:50px;
+    line-height: 50px;
+    bottom:20px;
+    right:20px;
+    border-radius:50px;
+    text-align:center;
+    z-index:100;
+    transition: all 300ms ease;
+    @include compatibilidad_transition(all 300ms ease);
+    &:hover{
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+        color: #ffff;
+        background-color: #00bb2d;
+    }
+}
