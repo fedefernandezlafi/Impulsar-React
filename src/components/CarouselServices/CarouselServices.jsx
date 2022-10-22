@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules
-import { EffectCoverflow, Pagination , Navigation} from "swiper";
+import { EffectCoverflow, Pagination , Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -8,15 +8,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 /* ------ icon ------- */
 import { MdTouchApp } from "react-icons/md";
-
 /* ----- customs ----- */
 import './CarouselServices.scss'
 
 export const CarouselServices = () =>{
+
     return(
         <article className='article__carousel__Services'>
-            <h3 class="h3 carousel_title ">MÁS SERVICIOS</h3>
+            <h3 className="h3 carousel_title ">MÁS SERVICIOS</h3>
             <Swiper
+                modules={[EffectCoverflow, Pagination, Navigation]}            
                 id='cards'
                 className='swiper carousel__Services'
                 effect={"coverflow"}
@@ -32,7 +33,6 @@ export const CarouselServices = () =>{
                 }}
                 pagination={true}
                 navigation={true}
-                modules={[EffectCoverflow, Pagination]}            
             >
                 <SwiperSlide id="card" className="swiper-slide card">
                     <div className="dp">
@@ -105,6 +105,5 @@ export const CarouselServices = () =>{
                 </SwiperSlide>
             </Swiper>
         </article>
-
     )
 }
