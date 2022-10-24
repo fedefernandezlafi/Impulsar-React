@@ -1,9 +1,9 @@
 import React from "react";
 import Cards from "../Cards/Cards";
-import "./Servicios.scss";
+import "./SectionServicios.scss";
 import { useCards } from "./useCards";
 
-const Servicios = () => {
+const SectionServicios = () => {
   const { cards } = useCards();
 
   return (
@@ -28,4 +28,4 @@ const Servicios = () => {
   );
 };
 
-export default Servicios;
+export default SectionServicios;

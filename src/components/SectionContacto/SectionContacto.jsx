@@ -1,9 +1,10 @@
 import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedin} from "react-icons/fa";
 import { Formik } from "formik"
 import { schema } from "./schema"
-import './Contacto.scss'
+import './SectionContacto.scss'
+import { BsFillBookmarkCheckFill } from "react-icons/bs";
 
-export const Contacto = () => {
+export const SectionContacto = () => {
     return(
         <section id="sectionContacto" className="section_contacto">
             <h2 id="contactoTitle" className="h2">
@@ -49,7 +50,13 @@ export const Contacto = () => {
                                         onChange={formik.handleChange}
                                         value={formik.values.email}
                                     />
-                                    {formik.errors.email && <p className="alert alert-danger">{formik.errors.email}</p>}
+                                    {
+                                        formik.email !== ''
+                                        ?
+                                        formik.errors.email && <p className="alert alert-danger">{formik.errors.email}</p>
+                                        :  
+                                        null
+                                    }
                                     <br/>
                                 </div>
                                 <div className="mb-3 separador-leve contenedor_inputs">

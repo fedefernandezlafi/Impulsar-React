@@ -1,15 +1,15 @@
 import { CarouselServices } from "components/CarouselServices/CarouselServices";
-import { Contacto } from "components/Contacto/Contacto";
-import Servicios from "../Servicios/Servicios";
+import { SectionContacto } from "components/SectionContacto/SectionContacto";
+import SectionServicios from "../SectionServicios/SectionServicios";
 import { Header } from "./Header/Header";
 
 export const Home = () => {
   return (
     <>
       <Header />
-      <Servicios />
+      <SectionServicios />
       <CarouselServices />
-      <Contacto />
+      <SectionContacto />
     </>
   );
 };
