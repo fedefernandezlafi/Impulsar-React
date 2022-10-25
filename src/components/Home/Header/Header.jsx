@@ -2,6 +2,7 @@ import "./scss/background.scss";
 import "./scss/chevron.scss";
 import "./scss/presentation.scss";
 import { SwiperHeader } from "./SwiperHeader";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Header = () => {
   return (
@@ -15,20 +16,30 @@ export const Header = () => {
           <div className="containerCarouselButton">
             <SwiperHeader />
             <div className="container_btn_presentacion">
-              <a href="#sectionServicios" className="btn_presentacion">
+              <LinkScroll
+                to="sectionServicios"
+                offset={-50}
+                duration={500}
+                className="btn_presentacion"
+              >
                 DESCUBRIR
-              </a>
+            </LinkScroll>
             </div>
           </div>
           <div
             id="contenedorAnimationChevron"
             className="contenedor_animationChevron"
           >
-            <a href="#sectionServicios" className="container_chevron">
+            <LinkScroll
+                to="sectionServicios"
+                offset={-50}
+                duration={500}
+                className="container_chevron"
+              >
               <div className="chevron"></div>
               <div className="chevron"></div>
               <div className="chevron"></div>
-            </a>
+            </LinkScroll>
           </div>
         </article>
       </section>

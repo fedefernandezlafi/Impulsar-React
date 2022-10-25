@@ -1,0 +1,445 @@
+//Responsive
+@media screen and (max-width: 1185px) {
+    .masServicios_speach{
+        .masServicios__speach__container__paragraphBeneficios{
+            margin-bottom: 1em;
+        }
+        .masServicios_speach_container_paragraph{
+            width: 90%;
+            padding: 1em;
+        }
+        .masServicios__speach__benefician{
+            margin-top: 2em;
+            margin-left: 0;
+            width: 100%;
+            .benefician_container{
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                .benefician{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    header{
+        .contenedor_logo_header{
+            width: 30%;
+        }
+    }
+    .section_nosotros{
+        .beneficios_container{
+            flex-direction: row;
+            flex-wrap: wrap;
+            .beneficio_content{
+                width: 40%;
+                margin: 1em;
+            }
+        }
+    }
+    .section_servicios{
+        .cardsImpulsos_container{
+            flex-wrap: wrap;
+        }
+        .container_content_impulso{
+            margin-right: 2em;
+            margin-left: 2em;
+            width: 30%;
+            min-height: 35rem;
+        }
+    }
+}
+@media screen and (max-width: 998px){
+    header{
+        .contenedor_logo_header{
+            width: 20%;
+        }
+        .contenedor_header_secciones{
+            width: 80%;
+        }
+    }
+    .section_nosotros{
+        .contenedor_nosotros_quienesSomos{
+            width: 80%;
+        }
+        .contenedor_nosotros_Speach{
+            width: 80%;
+        }
+    }
+    .section_contacto, .masServicios_formulario{
+        form{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                width: 100%;
+                text-align: center;
+                @include margin__Espaciado(1em,1em);
+            }
+        }
+        .formulario_contenedor_datos{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            @include margin__Espaciado(1em,1em);
+        }
+        .formulario_contenedor_textarea{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            @include margin__Espaciado(1em,1em);
+            .contenedor_btn_formulario{
+                .btn_formulario{
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px){
+    .section_contacto{
+        .formulario_contenedor_textarea{
+            .contenedor_btn_formulario{
+                .btn_formulario{
+                    min-width: 170px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    header nav{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    header{
+        .center {
+            display: block;
+            top: 50%;
+            right: 10%;
+            transform: translate(-50%, -50%);
+            @include compatibilidad_transform(translate(-50%, -50%));
+            position: relative;
+            width: 40px;
+        }    
+        .center:before,
+        .center:after,
+        .center div {
+            content: "";
+            display: block;
+            height: 6px;
+            border-radius: 3px;
+            margin: 7px 0;
+            transition: .5s;
+            @include compatibilidad_transition(.5s)
+        }
+        .center:hover:before {
+            transform: translateY(12px) rotate(135deg);
+            @include compatibilidad_transform(translateY(12px) rotate(135deg));
+        }
+        .center:hover:after {
+            transform: translateY(-12px) rotate(-135deg);
+            @include compatibilidad_transform(translateY(-12px) rotate(-135deg));
+        }
+        .center:hover div {
+            transform: scale(0);
+            @include compatibilidad_transform(scale(0));
+        }
+        .contenedor_header_secciones{
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .contenedor_burgerMenu{
+            display: inline-flex;
+            cursor: pointer;
+            width: 30%;
+            justify-content: flex-end;
+            align-items: baseline;
+        }
+        .burger_menu{
+            width: 30px;
+            height: 30px;
+            display: flex;
+        }
+        .anchord_secciones{
+            padding: 1em;
+        }
+        #toggler:checked ~ .contenedor_header_secciones{
+            max-height: 100%;
+            background-color: #000000;
+        }
+        .socialMedia{
+            @include margin__Espaciado(1em,1em);
+        }
+    }
+    .section_servicios{
+        .container_content_impulso{
+            min-width: 20rem;
+            .container_impulso_speach{
+                .impulso_paragraph{
+                    width: 85%;
+                }
+            } 
+        }
+    }
+    .masServicios_speach{
+        .masServicios_brindamos{
+            .beneficios{
+                flex-direction: column;
+                .beneficios_item{
+                    width: 90%;
+                }
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 768px){
+    .socialMedia_anchord i, .socialMedia_anchord img{
+        margin-bottom: 1em;
+    }
+    .section_servicios{
+        .section_servicios_paragraph{
+            width: 80%;
+        }
+        .container_content_impulso{
+            flex-direction: column;
+            width: 100%;
+            min-width: 16rem;
+            @include margin__Espaciado(1em,2em);
+        }
+        .servicio_principal_container{
+            .caminoDigital_paragraph{
+                width: 90%;
+            }
+            .impulsos_container{
+                width: 90%;
+                .impulsos_content{
+                    min-width: 280px;
+                    margin: 1em;
+                }
+            }
+            .containerStar{
+                width: 90%;
+            }
+        }
+        .caminoDigital_pie{
+            width: 90%;
+        }
+        .carousel_title {
+            width: 80%;
+        }
+    }
+    .section_nosotros{
+        article{
+            .contenedor_nosotros_quienesSomos,.contenedor_nosotros_Speach{
+                width: 90%;
+            }
+        }
+        .nosotros_valores_title_container{
+            .nosotros_valores_paragraph{
+                width: 90%;
+            }
+        }
+        //adn valores
+        .nosotros_valores_container{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .valores_container{
+                flex-direction: column;
+                .valores_content{
+                    @include margin__Espaciado(1em,1em);
+                    min-width: 130px;
+                }
+            }
+        }
+        .nosotros_mision_container{
+            .nosotros_mision_paragraph{
+                width: 100%;
+            }
+        }
+    }
+    .section_contacto{
+        .contacto_redesUbicacion{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .containerRedes{
+                width: 100%;
+                .contacto_redes{
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    width: 80%;
+                }
+            }
+            .container_ubicacion{
+                width: 100%;
+            }          
+        }
+        .contacto_calendly{
+            .contacto_calendly_title{
+                width: 90%;
+            }
+        }
+    }
+    .masServicios_intro_content{
+        width: 90%;
+    }
+    .masServicios_speach{
+        width: 90%;
+        p{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .masServicios_speach_container_paragraph{
+        width: 98%;
+    }
+    .masServicios_speach{
+        .masServicios__speach__container__paragraphBeneficios{
+            margin-bottom: 1em;
+        }
+        .masServicios_speach_container_paragraph{
+            width: 100%;
+        }
+        .masServicios__speach__benefician{          
+            .benefician_container{
+                align-items: center;
+                .benefician{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .masServicios_formulario{
+        .contacto_redes_container{
+            .contacto_redes{
+                width: 100%;
+            }
+        }
+    }  
+    .masServicios_formulario{
+        form{
+            width: 90%;
+        }
+        .formulario_contenedor_textarea{
+            margin-top: 0;
+            h3{
+                margin-top: 0;
+            }
+        }
+    }
+//cierre media 520px masServicios
+    .section_presentacion{
+        .contenedor_presentacion{
+            .containerCarouselButton{
+                .carouselPresentacion{
+                    margin-top: 1em;
+                }
+                .container_btn_presentacion{
+                    margin-top: 4em;
+                }
+            }
+
+        }
+    }
+    .section_servicios{
+        h2{
+            width: 90%;
+        }
+        .section_servicios{
+            .section_servicios_paragraph{
+                width: 90%;
+            }
+        }
+        .container_content_impulso{
+            .container_impulso_speach{
+                min-height: 10rem;
+            }
+        } 
+        .caminoDigital_container{
+            .container_content_caminoDigital{
+                width: 80%;
+                min-width: 12rem;
+                .caminoDigital_container_speach{
+                    min-height: 8rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 468px) {
+    .section_nosotros{
+        .beneficios_container{
+            flex-direction: column;
+            .beneficio_content{
+                width: 50%;
+                margin: 1em;
+            }
+        }
+    }
+    .section_servicios{
+        .servicio_principal_container{
+            .containerStar{
+                flex-direction: column;
+                .servicioPrincipal_title{
+                    width: 90%;
+                }
+            }
+            .impulsos_container{
+                flex-direction: column;
+                .impulsos_content{
+                    min-width: 80%;
+                }
+            }   
+        }
+    }
+    .section_contacto{
+        .contacto_redes_container{
+            @include margin__Espaciado(0em,0em);
+            width: 90%;
+            .contacto_redes{
+                width: 80%;
+            }
+        }
+        .formulario_contenedor_datos{
+            margin-bottom: 0;
+        }
+        .formulario_contenedor_textarea{
+            margin-top: 0;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .section_nosotros{
+        .beneficios_container{
+            flex-direction: column;
+            .beneficio_content{
+                width: 80%;
+                margin: 1em;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    /*Footer Media +768*/ 
+    footer{
+        .footer__logo{
+            width: calc(6em + 6vw);
+            @include margin__Espaciado(0,0);
+        }
+        /*CIerra Footer Media +768*/
+    }
+
+}

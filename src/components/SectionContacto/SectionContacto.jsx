@@ -2,7 +2,7 @@ import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedin} from "react-icons/fa";
 import { Formik } from "formik"
 import { schema } from "./schema"
 import './SectionContacto.scss'
-import { BsFillBookmarkCheckFill } from "react-icons/bs";
+import { BsFillBookmarkCheckFill, BsCheck2Circle } from "react-icons/bs";
 
 export const SectionContacto = () => {
     return(
@@ -29,7 +29,7 @@ export const SectionContacto = () => {
             <Formik
                 initialValues={{
                     nombre : "",
-                    mail: "",
+                    email: "",
                     telefono: ""
                 }}
                 validationSchema={schema}
@@ -40,7 +40,14 @@ export const SectionContacto = () => {
                             <div id="formularioContenedorDatos" className="formulario_contenedor_datos">
                                 <h3 className="h3">DATOS DE CONTACTO</h3>
                                 <div className="mb-3 separador-leve contenedor_inputs">
-                                    <label for="email" name="_replyto" className="form-label">Email</label>
+                                    <label for="email" name="_replyto" className="form-label">
+                                        Email
+                                    {
+                                        !formik.errors.email && formik.values.email !== '' 
+                                        ? <BsCheck2Circle className="check"/>
+                                        : null
+                                    }
+                                    </label>
                                     <input 
                                         className="section__formulario__contenedor__form-input" 
                                         type="email" 
@@ -51,16 +58,23 @@ export const SectionContacto = () => {
                                         value={formik.values.email}
                                     />
                                     {
-                                        formik.email !== ''
+                                        formik.values.email !== ''
                                         ?
-                                        formik.errors.email && <p className="alert alert-danger">{formik.errors.email}</p>
-                                        :  
-                                        null
+                                        formik.errors.email && <p className="alert alert-danger dangers">{formik.errors.email}</p>
+                                        : null
                                     }
+
                                     <br/>
                                 </div>
                                 <div className="mb-3 separador-leve contenedor_inputs">
-                                    <label for="nombre" className="form-label">Nombre</label>
+                                    <label for="nombre" className="form-label">
+                                        Nombre
+                                    {
+                                        !formik.errors.nombre && formik.values.nombre !== '' 
+                                        ? <BsCheck2Circle className="check"/>
+                                        : null
+                                    }
+                                    </label>
                                     <input 
                                         className="section__formulario__contenedor__form-input" 
                                         type="text" 
@@ -69,11 +83,19 @@ export const SectionContacto = () => {
                                         onChange={formik.handleChange}
                                         value={formik.values.nombre}
                                     />
-                                    {formik.errors.nombre && <p className="alert alert-danger">{formik.errors.nombre}</p>}
+                                    {
+                                        formik.values.nombre !== ''
+                                        ?
+                                        formik.errors.nombre && <p className="alert alert-danger dangers">{formik.errors.nombre}</p>
+                                        : null
+                                    }
                                     <br/>
                                 </div>
                                 <div className="mb-3 separador-leve contenedor_inputs">
-                                    <label for="telefono" className="form-label">Teléfono</label>
+                                    <label for="telefono" className="form-label">
+                                        Teléfono
+
+                                    </label>
                                     <input 
                                         className="section__formulario__contenedor__form-input" 
                                         type="tel" 
@@ -82,7 +104,12 @@ export const SectionContacto = () => {
                                         onChange={formik.handleChange}
                                         value={formik.values.telefono}
                                     />
-                                    {formik.errors.telefono && <p className="alert alert-danger">{formik.errors.telefono}</p>}
+                                    {
+                                        formik.values.telefono !== ''
+                                        ?
+                                        formik.errors.telefono && <p className="alert alert-danger dangers">{formik.errors.telefono}</p>
+                                        : null
+                                    }
                                     <br/>
                                 </div>
                             </div>

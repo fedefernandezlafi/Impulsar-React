@@ -10,7 +10,9 @@ export const schema = Yup.object().shape({
                         .email("Email inválido"),
         telefono: Yup.number()
                         .required("Este campo es obligatorio")
-                        .min(10,"El número es demasiado corta"),
+                        .typeError('Debe ingresar números')
+                        .min(5,"El número es demasiado corta"),
+                        
         message: Yup.string()
                         .required("Este campo es obligatorio")
                         .min(10, "El mensaje es muy corto"),               

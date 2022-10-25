@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "./Navbar.scss";
 
@@ -39,8 +39,6 @@ const Navbar = () => {
           <LinkScroll
             className="navbar__links"
             to="header"
-            offset={20}
-            smooth={true}
             duration={1000}
           >
             Inicio
@@ -50,24 +48,24 @@ const Navbar = () => {
           <LinkScroll
             className="navbar__links"
             to="sectionServicios"
-            offset={30}
-            smooth={true}
+            offset={-50}
             duration={1000}
           >
             Servicios
           </LinkScroll>
         </li>
         <li className="navbar__item">
-          <LinkScroll
+        <Link to={'/nosotros'} className='navbar__links'>Nosotros</Link>
+
+{/*           <LinkScroll
             className="navbar__links"
             to="us"
             offset={20}
             spy={true}
-            smooth={true}
             duration={1000}
           >
             Nosotros
-          </LinkScroll>
+          </LinkScroll> */}
         </li>
         <li className="navbar__item">
           <LinkScroll
@@ -75,7 +73,6 @@ const Navbar = () => {
             to="sectionContacto"
             offset={-50}
             spy={true}
-            smooth={true}
             duration={1000}
           >
             {" "}

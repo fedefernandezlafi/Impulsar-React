@@ -121,44 +121,44 @@
     }
 }
 
-    #impulsoVisual{
-        &:hover{
-            box-shadow: $color__lime 3px 4px 17px;
-            .container_impulso_speach{
-                .impulso_title{
-                    color: $color__lime;
-                }
-            };  
-        }
-        .contenedor_btn_pulse{
-            .btn_pulse{
-                &:hover{
-                    color: $color__lime;
-                    animation: pulsate-verdelima 1s ease-in-out;
-                    border: 3px solid $color__lime;
-                };
-            }    
-        }
+#impulsoVisual{
+    &:hover{
+        box-shadow: $color__lime 3px 4px 17px;
+        .container_impulso_speach{
+            .impulso_title{
+                color: $color__lime;
+            }
+        };  
     }
+    .contenedor_btn_pulse{
+        .btn_pulse{
+            &:hover{
+                color: $color__lime;
+                animation: pulsate-verdelima 1s ease-in-out;
+                border: 3px solid $color__lime;
+            };
+        }    
+    }
+}
 
-    #impulsoWeb{
-        &:hover{
-            box-shadow: $color__orange 3px 4px 17px;
-            .container_impulso_speach{
-                .impulso_title{
-                    color: $color__orange;
-                }
-            };  
-        }
-        .contenedor_btn_pulse{
-            .btn_pulse{
-                &:hover{
-                    color: $color__orange;
-                    animation: pulsate-naranja 1s ease-in-out;
-                    border: 3px solid $color__orange;
-                };
-            }    
-        }
-    } 
-       
+#impulsoWeb{
+    &:hover{
+        box-shadow: $color__orange 3px 4px 17px;
+        .container_impulso_speach{
+            .impulso_title{
+                color: $color__orange;
+            }
+        };  
+    }
+    .contenedor_btn_pulse{
+        .btn_pulse{
+            &:hover{
+                color: $color__orange;
+                animation: pulsate-naranja 1s ease-in-out;
+                border: 3px solid $color__orange;
+            };
+        }    
+    }
+}    
 
+@import '../styles/responsive'
