@@ -35,8 +35,8 @@
                 margin-bottom: 1em;
                 text-align: center;
                 text-decoration: none;
-                color: $color__lightblue-2;
-                box-shadow: $color__lightblue-2 2px 2px 5px;
+                color: $color__grey;
+                box-shadow: $color__grey 2px 2px 5px;
                 border-radius: 50%;
                 &:hover{
                     color: $color__pink;
@@ -98,6 +98,20 @@
             justify-content: space-around;
             font-weight: bold;
         }
+    }
+    .check{
+        color: $color__lime;
+        margin-left: .2em;
+        font-size: 1.5em;
+    }
+    .dangers{
+        background-color: $color__pink;
+        color: $color__grey-3;
+        @include flex__Center;
+        justify-content: flex-start;
+        height: 1.5em;
+        border: none;
+        overflow: hidden;
     }
     .formulario_contenedor_textarea{
         display: flex;
@@ -236,5 +250,6 @@
             }
         }
     }
-
 }
+
+@import '../styles/responsive'
